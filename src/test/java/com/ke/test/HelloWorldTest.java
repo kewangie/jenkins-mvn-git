@@ -17,7 +17,7 @@ public class HelloWorldTest {
 	
 	@Test
 	public void testSayHelloToTheWorld() {
-		assertThat(helloWorld.sayHelloToTheWorld(), is("Hello World xxx"));				
+		assertThat(helloWorld.sayHelloToTheWorld(), is("Hello World"));				
 	}
 
 }
