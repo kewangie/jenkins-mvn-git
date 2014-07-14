@@ -43,6 +43,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.10</version>
 				<configuration>
+					<jvm>${java7_home}/bin/java</jvm>
 					<skip>true</skip>
 				</configuration>
 				<executions>
