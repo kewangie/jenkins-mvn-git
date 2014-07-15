@@ -24,5 +24,8 @@ public class HelloWorldMain {
 			System.out.println(url.getFile());
 		}
 
+		String workingDir = System.getProperty("user.dir");
+		System.out.println("Current dir: " + workingDir);
+
 	}
 }
