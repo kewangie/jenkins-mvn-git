@@ -86,6 +86,26 @@
 					</formats>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<archive>
+						<index>true</index>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+						<manifestEntries>
+							<App-Version>${project.version}</App-Version>
+							<Build-Timestamp>${maven.build.timestamp}</Build-Timestamp>
+							<Build-User>${user.name}</Build-User>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
