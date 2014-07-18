@@ -32,7 +32,6 @@ public class ManifestReader {
 			} catch (IOException E) {
 
 			}
-
 		}
 	}
 
