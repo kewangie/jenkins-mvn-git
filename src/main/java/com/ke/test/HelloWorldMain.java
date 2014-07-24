@@ -10,9 +10,9 @@ public class HelloWorldMain {
 
 		System.out.println("Begin Hello World");
 
-		PropertyFileReader propertyFileReader = new PropertyFileReader();
+		// PropertyFileReader propertyFileReader = new PropertyFileReader();
 
-		propertyFileReader.readProperties();
+		// propertyFileReader.readProperties();
 
 		System.out.println("Finish Hello World");
 
