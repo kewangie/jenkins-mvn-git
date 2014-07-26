@@ -126,5 +126,6 @@
 		<url>https://github.com/kewangie/jenkins-mvn-git</url>
 	  <tag>HEAD</tag>
   </scm>
-	<version>1.0.2-SNAPSHOT</version>
+	x
+	<version>1.0.0</version>
 </project>
