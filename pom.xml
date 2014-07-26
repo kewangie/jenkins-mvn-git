@@ -124,7 +124,7 @@
 		<connection>scm:git:git@github.com:kewangie/jenkins-mvn-git.git</connection>
 		<developerConnection>scm:git:git@github.com:kewangie/jenkins-mvn-git.git</developerConnection>
 		<url>https://github.com/kewangie/jenkins-mvn-git</url>
-	  <tag>first-release</tag>
+	  <tag>HEAD</tag>
   </scm>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 </project>
