@@ -1,9 +1,11 @@
-package com.ke.test;
+package com.ke.test.lambda;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
+
+import com.ke.test.TwoArgIntOperator;
 
 public class LambdaTest {
 
