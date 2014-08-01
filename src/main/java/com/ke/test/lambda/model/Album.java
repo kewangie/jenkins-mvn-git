@@ -1,4 +1,4 @@
-package com.ke.test.lambda;
+package com.ke.test.lambda.model;
 
 import static java.util.Collections.unmodifiableList;
 

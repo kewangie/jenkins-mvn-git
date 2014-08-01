@@ -3,6 +3,8 @@ package com.ke.test.lambda;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.ke.test.lambda.model.Album;
+
 public class Java8FindLongTracks {
 
 	public List<String> findLongTracks(List<Album> albums) {

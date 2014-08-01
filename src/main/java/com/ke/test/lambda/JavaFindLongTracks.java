@@ -3,6 +3,8 @@ package com.ke.test.lambda;
 import java.util.List;
 
 import com.google.common.collect.Lists;
+import com.ke.test.lambda.model.Album;
+import com.ke.test.lambda.model.Track;
 
 public class JavaFindLongTracks {
 
