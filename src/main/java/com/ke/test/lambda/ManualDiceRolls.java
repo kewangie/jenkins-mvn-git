@@ -76,7 +76,7 @@ public class ManualDiceRolls {
 			try {
 				future.get();
 			} catch (InterruptedException | ExecutionException e) {
-				e.printStackTrace();
+
 			}
 		});
 		executor.shutdown();
