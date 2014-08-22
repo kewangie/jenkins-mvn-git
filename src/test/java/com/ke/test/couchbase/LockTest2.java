@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import com.couchbase.client.CouchbaseClient;
 
@@ -21,10 +23,11 @@ public class LockTest2 {
 		client = new CouchbaseClient(hosts, bucket, password);
 	}
 
-	// @Test
+	@Test
+	@Ignore
 	public void testLock() throws InterruptedException {
 
-		client.getAndLock("1-1-3600-0.01", 0);
+		client.getAndLock("1-1-3600-0.01", 3);
 		while (true) {
 			System.out.println("Hello From LockTest2");
 			Thread.sleep(2000l);

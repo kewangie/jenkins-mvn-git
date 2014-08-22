@@ -6,8 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadPoolTest {
 
-	private static final LinkedBlockingQueue<Runnable> myQueue = new LinkedBlockingQueue<Runnable>();
-	private static final ThreadPoolExecutor EXECUTOR = new ThreadPoolExecutor(3, 3, 0L, TimeUnit.MILLISECONDS, myQueue);
+	// private static final LinkedBlockingQueue<Runnable> myQueue = new LinkedBlockingQueue<Runnable>();
+	private static final ThreadPoolExecutor EXECUTOR = new ThreadPoolExecutor(3, 3, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -22,8 +22,9 @@ public class ThreadPoolTest {
 
 		while (true) {
 			Thread.sleep(2000l);
-			System.out.println("Queue size:" + myQueue.size());
+			System.out.println("Queue size:" + EXECUTOR.getQueue().size());
 			System.out.println("active count:" + EXECUTOR.getActiveCount());
+
 		}
 	}
 }

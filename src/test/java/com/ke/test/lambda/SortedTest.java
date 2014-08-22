@@ -7,10 +7,13 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.junit.Test;
+
+import com.google.common.collect.Maps;
 
 public class SortedTest {
 
@@ -61,6 +64,22 @@ public class SortedTest {
 		max = list.stream().sorted().collect(Collectors.toList()).get(list.size() - 1);
 
 		assertThat(max, is(new BigDecimal("38.00")));
+
+	}
+
+	@Test
+	public void testBigDecimalSortedMap() {
+
+		Map<BigDecimal, BigDecimal> map = Maps.newHashMap();
+		map.put(new BigDecimal("3.68"), new BigDecimal("25.88"));
+		map.put(new BigDecimal("0.58"), new BigDecimal("13.88"));
+		map.put(new BigDecimal("2.68"), new BigDecimal("8.88"));
+		map.put(new BigDecimal("1.68"), new BigDecimal("57.88"));
+		map.put(new BigDecimal("5.78"), new BigDecimal("10.88"));
+
+		assertThat(
+				map.entrySet().stream().filter(e -> e.getKey().compareTo(new BigDecimal("2.00")) == 1)
+						.sorted((e1, e2) -> e1.getKey().compareTo(e2.getKey())).map(e -> e.getValue()).findFirst().get(), is(new BigDecimal("8.88")));
 
 	}
 }
