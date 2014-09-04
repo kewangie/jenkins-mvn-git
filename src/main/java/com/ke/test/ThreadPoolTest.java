@@ -12,10 +12,16 @@ public class ThreadPoolTest {
 	public static void main(String[] args) throws InterruptedException {
 
 		for (int i = 0; i < 5; i++) {
-			EXECUTOR.submit(() -> {
-				while (true) {
-					System.out.println("Hell From: " + Thread.currentThread().getName());
-					Thread.sleep(1000l);
+			EXECUTOR.submit(new Runnable() {
+				@Override
+				public void run() {
+					while (true) {
+						System.out.println("Hell From: " + Thread.currentThread().getName());
+						try {
+							Thread.sleep(1000l);
+						} catch (InterruptedException e) {
+						}
+					}
 				}
 			});
 		}

@@ -20,6 +20,12 @@
 			<groupId>com.couchbase.client</groupId>
 			<artifactId>couchbase-client</artifactId>
 			<version>1.4.3</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>stax-api</artifactId>
+					<groupId>stax</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
@@ -55,12 +61,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>4.0.0.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>0.12.0</version>
-		</dependency>
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -85,7 +86,7 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.6.11</version>
 		</dependency>
-		
+
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -116,7 +117,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
+				</configuration>				
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
