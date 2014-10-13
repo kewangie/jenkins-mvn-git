@@ -9,11 +9,10 @@ import org.junit.Test;
 
 public class BinaryOperatorTest {
 
-	private BinaryOperator<Long> add = (x, y) -> x + y;
+	private BinaryOperator<Integer> add = (x, y) -> x + y;
 
 	@Test
 	public void binaryOperatorTest() {
-		assertThat(add.apply(5l, 6l), is(11l));
+		assertThat(add.apply(5, 6), is(11));
 	}
-
 }
